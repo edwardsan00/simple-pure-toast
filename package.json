@@ -31,9 +31,6 @@
   "name": "simple-pure-toast",
   "author": "Edward Sanchez <edwardsan00@gmail.com>",
   "module": "dist/simple-pure-toast.esm.js",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/edwardsan00/simple-pure-toast.git"
