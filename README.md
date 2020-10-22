@@ -93,4 +93,4 @@ toast.warning()
 | description |                       |               |  `string` |
 | icon        | show icon             | true          | `boolean` |
 | time        | setTime               | 6000          | `number`  |
-| position    | toast position        | topLeft       | ` 'topLeft' | 'topCenter' | 'topRight' | 'bottomLeft' | 'bottomCenter' | 'bottomRight'` |
+| position    | toast position        | topLeft       | `topLeft, topCenter, topRight, bottomLeft, bottomCenter, bottomRight` |
