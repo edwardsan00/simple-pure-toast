@@ -1,56 +1,32 @@
-# Notify zh
+# simple-pure-toast
+
+This proyect is a fork from [notify-zh](https://github.com/xavivzla/notify-zh/)
 
 This project was bootstrapped with [TSDX](https://github.com/jaredpalmer/tsdx).
 
-Es una pequeña libreria para el FrontEnd. Esta libreria tiene un peso de 1.4 Kb.
+you cand add in lib like React, Vue js and angular
 
-Puede ser usada en paginas estaticas como en frameworks (React, Vue js, angular)
-
-## Instalación
+## Install
 
 
 ```bash
- yarn add notify-zh or npm install notify-zh
+ yarn add simple-pure-toast or npm install simple-pure-toast
 ```
 
-## Uso
+## Usage
 
 ### React js
 
 ```jsx
-  import React, {UseEffect} from 'React'
-  import Notify from 'notify-zh'
+  import React from 'React'
+  import toast from 'simple-pure-toast'
 
   const MyComponent = () => {
-
-    useEffect(() => {
-      Notify.success({
-            message: 'Success',
-            option: {
-              time: 5000
-            }
-          })
-    }, [])
-
     return (
       <div>
-        <button
-        onClick={() =>
-          Notify.success({
-            message: 'Success',
-            option: {
-              time: 5000,
-              icon: {
-                el: `<span style="background: #ddd; padding: 9px; border-radius: 50%">
-                      <i>!</i>
-                    </span>`
-              }
-            }
-          })
-        }
-      >
-        Success
-      </button>
+        <button onClick={() => toast.success('Yeah! Toast')}>
+          Success
+        </button>
       </div>
     )
   }
@@ -61,15 +37,15 @@ Puede ser usada en paginas estaticas como en frameworks (React, Vue js, angular)
 
 ```js
 import Vue from "vue";
-import Notify from "notify-zh";
+import toast from "simple-pure-toast";
 import App from "./App.vue";
 
 Vue.config.productionTip = false;
 
 const MyPlugin = {
   install() {
-    Vue.notify = Notify;
-    Vue.prototype.$notify = Notify;
+    Vue.toast = toast;
+    Vue.prototype.$toast = toast;
   }
 };
 
@@ -92,19 +68,29 @@ export default {
   name: "Component1",
   methods: {
     runError() {
-      this.$notify.error({
-        message: 'Error',
-        option: {
-          time: 5000,
-          icon: {
-            el: `<span style="background: #ddd; padding: 9px; border-radius: 50%">
-                  <i>!</i>
-                </span>`
-          }
-        }
-      });
+      this.$toast.error('Problem');
     }
   }
 }
 </script>
 ```
+## Methods and params
+```js
+const params = {
+  message?: string // optional
+  options?: options // optional
+}
+toast.success(params)
+toast.error()
+toast.info()
+toast.warning()
+```
+
+## Options
+
+| Name        | Description           | default       | type |
+| :---        |    :----:             |          ---: | ---: |
+| description |                       |               |  `string` |
+| icon        | show icon             | true          | `boolean` |
+| time        | setTime               | 6000          | `number`  |
+| position    | toast position        | topLeft       | ` 'topLeft' | 'topCenter' | 'topRight' | 'bottomLeft' | 'bottomCenter' | 'bottomRight'` |

@@ -17,9 +17,6 @@
     "lint": "tsdx lint",
     "prepare": "tsdx build"
   },
-  "peerDependencies": {
-    "react": ">=16"
-  },
   "husky": {
     "hooks": {
       "pre-commit": "tsdx lint"
@@ -31,25 +28,26 @@
     "singleQuote": true,
     "trailingComma": "none"
   },
-  "name": "notify-zh",
-  "author": "Xavier Gonzalez <xavivzla.g@gmail.com>",
-  "module": "dist/notify-zh.esm.js",
+  "name": "simple-pure-toast",
+  "author": "Edward Sanchez <edwardsan00@gmail.com>",
+  "module": "dist/simple-pure-toast.esm.js",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/xavivzla/notify-zh.git"
+    "url": "https://github.com/edwardsan00/simple-pure-toast.git"
   },
   "keywords": [
     "notification",
+    "toast",
     "react",
     "vue",
     "angular",
     "alert",
-    "nessage"
+    "message"
   ],
-  "description": "Es una pequeña libreria de notificaciones para el FrontEnd. Esta libreria tiene un peso de 1.4 Kb.",
+  "description": "Functional simple toast",
   "devDependencies": {
     "@testing-library/jest-dom": "^5.10.1",
     "@types/react": "^16.9.49",

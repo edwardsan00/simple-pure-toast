@@ -6,6 +6,7 @@
     "importHelpers": true,
     "declaration": true,
     "sourceMap": true,
+    "target": "ES5",
     "rootDir": "./src",
     "strict": true,
     "noUnusedLocals": true,

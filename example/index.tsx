@@ -1,40 +1,25 @@
-import 'react-app-polyfill/ie11';
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import Notify from '../.';
+import 'react-app-polyfill/ie11'
+import * as React from 'react'
+import * as ReactDOM from 'react-dom'
+import toast from '../.'
 
 const App = () => {
-
   return (
     <div>
-      <button
-        onClick={() =>
-          Notify.error({
-            message: 'Error',
-            option: {
-              time: 2000,
-              icon: {
-                el: `<span 
-                  style="width: 20px; 
-                  height: 20px;
-                  background: #C12A09; 
-                  padding: 9px;
-                  border-radius: 50%;
-                  display: flex;
-                  justify-content: center;
-                  box-sizing: border-box;
-                  align-items: center">
-                      <i>!</i>
-                    </span>`
-              }
-            }
-          })
-        }
-      >
+      <button onClick={() => toast.success('', { position: 'bottomLeft' })}>
         Success
+      </button>
+      <button onClick={() => toast.error('', { position: 'topLeft' })}>
+        Error
+      </button>
+      <button onClick={() => toast.info('', { position: 'topRight' })}>
+        info
+      </button>
+      <button onClick={() => toast.warning('', { position: 'bottomRight' })}>
+        warning
       </button>
     </div>
   )
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'))
