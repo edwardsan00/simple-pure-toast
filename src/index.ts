@@ -70,6 +70,7 @@ class Notify {
         sheet.innerHTML = `
           #toastContainer{
             position: fixed;
+            z-index: 9999;
             display: flex;
             flex-direction: column-reverse;
           }
