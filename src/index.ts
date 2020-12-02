@@ -80,6 +80,7 @@ class Notify {
           .toast {
             z-index: 9999;
             min-height: 80px;
+            height: auto;
             width: 440px;
             border-radius: 8px;
             margin-top: 20px;
@@ -148,7 +149,7 @@ class Notify {
             display: flex;
             padding: 16px 16px 16px 28px;
             box-sizing: border-box;
-            height: 100%;
+            min-height: 100%;
           }
           .toast__box-icon{
             margin-right: 1rem;
