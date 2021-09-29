@@ -23,11 +23,11 @@ type NotifyUnsubscribe = NotifyOptions & {
 
 const info = {
   success: {
-    title: '!Listo!',
+    title: '¡Listo!',
     description: 'Completado correctamente'
   },
   warning: {
-    title: '!Alerta!',
+    title: '¡Alerta!',
     description: 'Esta informacion puede estar imcompleta'
   },
   error: {
